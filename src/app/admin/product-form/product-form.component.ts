@@ -18,7 +18,7 @@ export class ProductFormComponent implements OnInit {
     this.categories$ = this.categoryService.getCategories()
   }
 
-  log(e) {
-    console.log(e);
-  }
+ save(product){
+   console.log(product);
+ }
 }
