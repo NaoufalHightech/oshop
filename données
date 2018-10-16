@@ -1,0 +1,90 @@
+[33mcommit 88886d5988718693b31361266be158383afcb8cc[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Tue Oct 16 10:56:19 2018 +0200
+
+    GÃ©neration du service qui va permetre d'enregistrer le produit dans la
+    base de donnÃ©es firebase et l'enregistrer dans app.module.ts dans
+    provider
+    
+    ng g s product
+    
+    Injection du service dans le constructeur de ProductFormComponent
+    
+    Implementation de save(product) {
+        this.productService.create(product);
+          }
+    
+              create(product) {
+                  this.db.list('/products').push(product);
+                    }
+
+[33mcommit 63783d2181554ea76b3b8226c6ad4b50ad494207[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Tue Oct 16 10:42:15 2018 +0200
+
+    Ajout de ngModel sur tous les inputs pour crÃ©er l'objet formControl
+    
+    Template-Driven-Form
+    Ce qui permet de rÃ©cuperer l'object produit a ajouter sous format JSON
+    Gestion de l'evenement (ngSubmit)="save()" et le dÃ©finition d'un
+    template #f="ngForm" qui va contenir l'objet produit sous form de JSON
+
+[33mcommit 342462f3bd859b7c354c87e546965061657d10df[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Tue Oct 16 10:10:59 2018 +0200
+
+    Correction du Bug au niveau du formulaire produit
+    
+    Correction du nom de la ressource firebase
+    Correction de l'affichage de l'addons
+
+[33mcommit 41f7c1ec59ece3cc3868664e136cae1169635517[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Mon Oct 15 16:45:13 2018 +0200
+
+    Peupler les catÃ©gories
+    
+    Utiliser un service pour rÃ©cupÃ¨rer les catÃ©gories  ng g s category
+
+[33mcommit 1c58ac7c19fb6583035f51429b21f5f8a93880de[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Mon Oct 15 14:39:52 2018 +0200
+
+    Creation du formulaire pour l'admin pour ajouter des nouveaux produits
+    
+    Utilisation de ng g c form-product
+    utilisation des formulaies bootstrap 4 avec un addons $ pour la saisie
+    d'un nouveau produit
+
+[33mcommit 1d39221846686a6769a219aeb27548d0898bbacf[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Mon Oct 15 11:29:23 2018 +0200
+
+    Ajout de AdminAuthGaurd
+    
+    Ajout d'un modele AppUser
+    Utilsation des observables pour mapper de user => AppUser => Boolean
+    Utilsation de ng Container
+
+[33mcommit 3235bbcbcae92978e3aa04f9a8089629ef01876d[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Thu Oct 11 11:52:20 2018 +0200
+
+    CrÃation de l'application OShop
+    
+    -Integration de Bootstrap
+    -Mise en place de login/logout avec google
+    -Mise en place de la navigation avec routing et guard route
+    -IntÃgration de angularfirebase2 et firebase
+
+[33mcommit 79947d7f5ce5be5076d70d55925c8608b015c96f[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Thu Oct 11 11:44:57 2018 +0200
+
+    Authentification et Autorisation
+
+[33mcommit 3d01189172f36ffe4907f6b08dfebe03bbfe4b40[m
+Author: Ben-Bouazza Naoufal <naoufal.ben-bouazza@gfi.fr>
+Date:   Wed Oct 10 09:52:58 2018 +0200
+
+    initial commit

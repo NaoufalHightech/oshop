@@ -2,6 +2,7 @@ import { ProductService } from './../../product.service';
 import { Observable } from 'rxjs/Rx';
 import { CategoryService } from './../../category.service';
 import { Component, OnInit } from '@angular/core';
+import { CustomFormsModule } from 'ng2-validation';
 
 @Component({
   selector: 'app-product-form',

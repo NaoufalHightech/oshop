@@ -1,3 +1,4 @@
+import { CustomFormsModule } from 'ng2-validation';
 import { ProductService } from './product.service';
 import { CategoryService } from './category.service';
 
@@ -58,7 +59,8 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule,
+    AngularFireAuthModule, 
+    CustomFormsModule,    
     NgbModule.forRoot(),
     RouterModule.forRoot([
       {path:'', component: HomeComponent},
